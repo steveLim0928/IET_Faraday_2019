@@ -19,6 +19,6 @@ Welcome everyone, below you will find links on how to get started.
 5) Including capacitive sensor library. 
     a) On the top, select: Sketch > Include Library > Add .ZIP Library > select "CapacitiveSensor.zip".
     b) For more details related to "CapacitiveSensor" library, 
-       please visit :https://playground.arduino.cc/Main/CapacitiveSensor/
+       please visit: https://playground.arduino.cc/Main/CapacitiveSensor/
        
 You are all set and done. Good luck and all the best.
