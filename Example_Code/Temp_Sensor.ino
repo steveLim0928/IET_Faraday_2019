@@ -1,25 +1,19 @@
-//MCP9700 data sheet: http://ww1.microchip.com/downloads/en/devicedoc/20001942g.pdf
+//LM35DZ data sheet: http://www.ti.com/lit/ds/symlink/lm35.pdf
 
-const int tempSensorPin = A5;
-
-float tempSensorVal, temp;
-
-void setup() {
-  // put your setup code here, to run once:
-
-  Serial.begin (9600);
-  pinMode (tempSensorPin, INPUT);
-
+int ldrPin = 7;
+int value = 0;
+float voltage = 0;
+float temp = 0;
+void setup ()
+{
+Serial.begin(9600);
 }
-
-void loop() {
-  // put your main code here, to run repeatedly:
-
-  tempSensorVal = analogRead (tempSensorPin);
-
-  temp = 100 * ((tempSensorVal/1023)*5) - 50;
-
-  Serial.println (temp);
-  delay (100);
-
+void loop ()
+{
+value = analogRead(A0);      // sensor output to arduino analog A0 pin
+voltage = value*0.00488;
+temp = voltage*100;
+Serial.print("TEMP:");
+Serial.println(temp);
+delay(500);
 }
